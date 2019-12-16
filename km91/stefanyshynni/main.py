@@ -17,34 +17,21 @@ QUERY = """
 df = bq_assistant.query_to_pandas(QUERY)
 
 
-trace1 = go.Scatter(
+trace1 = go.Bar(
                     x = df['tree_id'].index,
                     y = df['legal_status'].values,
                     mode = "lines",
                     name = "female",
                     )
 
-trace2 = go.Scatter(
-                    x = df['tree_id'].index,
-                    y = df['plant_date'].values,
-                    mode = "lines",
-                    name = "female",
-                    )
-
-trace3 = go.Scatter(
-                    x = df['permit_notes'].index,
-                    y = df['plant_date'].values,
-                    mode = "lines",
-                    name = "female",
-                    )
 
 
-data = [trace3]
+data = [trace1]
 
 layout = dict(
               title = '',
               xaxis= dict(title= ''),
               yaxis=dict(title=''),
              )
-fig = dict(data = [trace3], layout = layout)
+fig = dict(data = [trace1], layout = layout)
 plot(fig)
