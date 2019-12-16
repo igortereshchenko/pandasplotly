@@ -1,0 +1,4 @@
+station_idStation - ID number
+bikes_available - Number of available bikes
+docks_available - Number of available docks
+time - Date and time
