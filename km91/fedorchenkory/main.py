@@ -29,12 +29,13 @@ trace1 = go.Scatter(x = df.index,
 
 
 
-trace2 = go.Pie(
+trace2 = go.Pie(labels = df['time'],
+                values = df['bikes_avaliable']
 
                     )
 
-trace3 = go.Bar(x = ['docks_avaliable'],
-                y = ['bikes_avaliable']
+trace3 = go.Bar(x = df['docks_avaliable'],
+                y = df['bikes_avaliable']
 
 )
 
