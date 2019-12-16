@@ -1,0 +1,4 @@
+category - вид правопорушення
+dayofweek - день тижня
+latitude - широта
+timestamp - дата та час правопорушення
