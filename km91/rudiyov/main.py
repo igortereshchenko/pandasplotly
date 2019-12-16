@@ -18,11 +18,7 @@ df = bq_assistant.query_to_pandas(QUERY)
 
 values = df['call_type'].value_counts().reset_index().sort_values(by='index')
 values_act = df['call_date'].value_counts().reset_index().sort_values(by='index')
-
-
-def find(data):
-    return data[6:10]
-
+values_city = df['city'].value_counts().reset_index().sort_values(by='index')
 
 trace1 = go.Scatter(
     x=values_act['index'],
@@ -32,7 +28,8 @@ trace1 = go.Scatter(
 )
 
 trace2 = go.Pie(
-
+    labels=values_city['index'],
+    values=values_city['city']
 )
 
 trace3 = go.Bar(
@@ -54,5 +51,6 @@ layout_scatter = dict(
 
 )
 fig_bar = dict(data=[trace3], layout=layout_bar)
-fig_scatter = dict(data=[trace1],layout=layout_scatter )
-plot(fig_scatter)
+fig_scatter = dict(data=[trace1], layout=layout_scatter)
+fig_pie = dict(data=[trace3])
+plot(fig_pie)
