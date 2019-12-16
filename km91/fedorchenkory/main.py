@@ -12,14 +12,18 @@ bq_assistant = BigQueryHelper('bigquery-public-data', 'san_francisco')
 
 QUERY = """
         SELECT * FROM `bigquery-public-data.san_francisco.bikeshare_status`
-        LIMIT 10
+        LIMIT 11
         """
 
 
 df = bq_assistant.query_to_pandas(QUERY)
 
 print(df.head(10))
-trace1 = go.Scatter(
+print(df.index)
+trace1 = go.Scatter(x = df.index,
+                    y = df.values,
+                    mode = 'lines',
+                    name = 'dd'
 
                     )
 
@@ -29,8 +33,8 @@ trace2 = go.Pie(
 
                     )
 
-trace3 = go.Bar(x = ['station_id'],
-                y = ['time']
+trace3 = go.Bar(x = ['docks_avaliable'],
+                y = ['bikes_avaliable']
 
 )
 
