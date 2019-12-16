@@ -17,9 +17,18 @@ QUERY = """
 df = bq_assistant.query_to_pandas(QUERY)
 
 values = df['call_type'].value_counts().reset_index().sort_values(by='index')
+values_act = df['call_date'].value_counts().reset_index().sort_values(by='index')
+
+
+def find(data):
+    return data[6:10]
+
 
 trace1 = go.Scatter(
-
+    x=values_act['index'],
+    y=values_act['call_date'],
+    mode="lines+markers",
+    name="Активність"
 )
 
 trace2 = go.Pie(
@@ -38,5 +47,12 @@ layout_bar = dict(
     xaxis=dict(title='types'),
     yaxis=dict(title='counts'),
 )
+layout_scatter = dict(
+    xaxis=dict(title='Дата'),
+    yaxis=dict(title='кількість викликів'),
+    title='Активність'
+
+)
 fig_bar = dict(data=[trace3], layout=layout_bar)
-plot(fig_bar)
+fig_scatter = dict(data=[trace1],layout=layout_scatter )
+plot(fig_scatter)
