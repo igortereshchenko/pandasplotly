@@ -1,0 +1,4 @@
+trip_id - унікальний ідентифікатор подорожі (int)
+duration_sec - тривалість подорожі в секундах (int)
+start_station_name - назва початкової станції (str)
+subscriber_type ("Subscriber" or "Customer")
