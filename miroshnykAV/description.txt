@@ -1,0 +1,4 @@
+unique_key - Unique case id
+created_date - The date and time when the service request was made
+status - The current status of the service request.
+agency_name - The agency responsible for fulfilling or otherwise addressing the service request.
