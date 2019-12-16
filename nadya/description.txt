@@ -1,0 +1,5 @@
+unique_key - a specified number, that belongs to the server
+status - one statement(open/closed)
+descript -why the accident happened
+dayofweek- when the accident happened
+category - the Human readable name of the specific service request type
