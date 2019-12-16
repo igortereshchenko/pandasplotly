@@ -51,4 +51,4 @@ fig1 = go.Figure(data=[trace1], layout=layout1)
 fig2 = go.Figure(data=[trace2])
 fig3 = go.Figure(data=[trace3], layout=layout3)
 
-plot(fig1)
+plot(fig2)
