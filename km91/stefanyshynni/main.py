@@ -31,6 +31,12 @@ trace2 = go.Scatter(
                     name = "female",
                     )
 
+trace3 = go.Scatter(
+                    x = df['permit_notes'].index,
+                    y = df['plant_date'].values,
+                    mode = "lines",
+                    name = "female",
+                    )
 
 
 data = [trace1]
