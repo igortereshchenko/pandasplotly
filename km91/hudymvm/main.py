@@ -18,3 +18,21 @@ QUERY = """
 df = bq_assistant.query_to_pandas(QUERY)
 print(df.head(5))
 
+category = df['category']
+latitude = df['latitude']
+
+
+trace1 = go.Scatter(
+                x = category.index,
+                y = latitude.values,
+                mode = 'lines'
+                    )
+
+day = df['dayofweek']
+time = df['timestamp']
+
+data = [trace1]
+
+
+fig = dict(data = [trace1])
+plot(fig)
