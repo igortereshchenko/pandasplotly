@@ -36,13 +36,13 @@ layoutScatter = dict(
 tracescatter=dict(data=[trace1],layout=layoutScatter)
 plot(tracescatter)
 
-#numberofcustomers = df.groupby(["subscriber_type"])["trip_id"].count()
+numberofcustomers = df.groupby(["subscriber_type"])["trip_id"].count()
 
 
-#mypiegraph = go.Figure(
+mypiegraph = go.Figure(
 data=[go.Pie(labels=numberofcustomers.index, values=numberofcustomers.values)]
 )
-#plot(mypiegraph)
+plot(mypiegraph)
 
 
 
