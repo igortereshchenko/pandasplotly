@@ -31,14 +31,20 @@ trace2 = go.Scatter(
                     name = "female",
                     )
 
+trace3 = go.Scatter(
+                    x = df['permit_notes'].index,
+                    y = df['plant_date'].values,
+                    mode = "lines",
+                    name = "female",
+                    )
 
 
-data = [trace2]
+data = [trace3]
 
 layout = dict(
               title = '',
               xaxis= dict(title= ''),
               yaxis=dict(title=''),
              )
-fig = dict(data = [trace2], layout = layout)
+fig = dict(data = [trace3], layout = layout)
 plot(fig)
