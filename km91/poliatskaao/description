@@ -1,0 +1,4 @@
+unique_key - The unique incident number for this accident
+pddistrict - Police Department district
+resolution - Whether there was an arrest, citation, booking, etc.
+pdid - Unique Identifier for use in update and insert operations

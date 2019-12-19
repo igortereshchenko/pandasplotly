@@ -1,0 +1,4 @@
+station_id - номер станції
+bikes_available - байків доступно
+docks_available - номер доступних доків
+time - дата та час
