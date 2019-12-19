@@ -6,7 +6,8 @@ import pandas as pd
 import plotly.graph_objs as go
 from plotly.offline import plot
 
-#bq_assistant = BigQueryHelper(,)
+
+bq_assistant = BigQueryHelper()
 
 
 QUERY = """
